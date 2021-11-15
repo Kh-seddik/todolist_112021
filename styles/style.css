@@ -1,0 +1,383 @@
+body,html{
+    height: 100%;
+}
+body{
+    background-color: #eee;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+p{
+    margin: 0;
+}
+
+.main_app{
+    min-height: 600px;
+    min-width: 350px;
+    height: 100%;
+}
+
+.todo_container{
+    min-height: 600px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow:0 20px 40px rgba(0,0,0,.1);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.top_title{
+    padding: 40px 30px;
+    flex-grow: 0;
+}
+.top_title span{
+    font-size: 40px;
+    color: #393939;
+}
+.bill {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    float: right;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 40px;
+    cursor:pointer;
+}
+
+.bill:hover img{
+    animation-name:ringbill;
+    animation-duration: .4s;
+    animation-timing-function: ease-out;
+    transform-origin: top center;
+}
+
+.top_title:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.bill img{
+    width: 25px;
+    height: 25px;
+}
+
+@keyframes ringbill{
+    0%{transform: rotate(0deg)}
+    25%{transform: rotate(30deg)}
+    50% {transform: rotate(-30deg)}
+    75%{transform: rotate(15deg)}
+    100%{transform: rotate(0deg)}
+
+}
+
+.main_menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    flex-grow: 1;
+    height: 635px;
+}
+
+.right_menu{
+    flex:1;
+    background-color: #F5F5F5;
+    padding: 23px 100px 85px 0px;
+    overflow-y: auto;
+    position: relative;
+
+}
+
+
+.left_menu{
+    width: 73px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.left_menu span{
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    color: #D5D4D4;
+    cursor: pointer;
+}
+
+.chooseDate span{
+    color: #393939;
+    cursor: pointer;
+}
+
+.left_menu span, .chooseDate span:not(.selected_span):hover{
+    color: #9d9c9c;
+}
+
+.chooseDate .selected_span, .left_menu .selected_span {
+    color: #FE4775;
+}
+
+.closeBTN{
+    position: absolute;
+    z-index: 3;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.closeBTN span{
+    display: inline-block;
+    font-size: 50px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+.add_task{
+    width: 87px;
+    height: 78px;
+    background-color: #FE4775;
+    position: fixed;
+    right:0;
+    bottom: 0;
+    border-style: none;
+    border-top-left-radius: 8px;
+    font-size: 37px;
+    color: white;
+    padding: 8px 0 2px 0;
+}
+.add_task span{
+    display: inline-block;
+    transition: all .3s ease-in-out;
+}
+.add_task:hover{
+    cursor: pointer;
+    background-color: #ec4673;
+}
+.add_task:hover span{
+    transform: rotate(180deg);
+}
+
+.right_menu p{
+    font-size: 18px;
+    margin: 25px;
+    word-wrap: break-word;
+}
+.add_new_popup{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 100%;
+    -webkit-transition: left .5s ease-in-out;
+    -moz-transition: left .5s ease-in-out;
+    -ms-transition: left .5s ease-in-out;
+    -o-transition: left .5s ease-in-out;
+    transition: left .5s ease-in-out;
+}
+.add_new_popup.opened{
+    left: 0;
+}
+
+.addNew_title{
+    flex-grow: 0;
+    padding: 0 30px;
+}
+
+.addNew_title span{
+    font-size: 40px;
+    color: #393939;
+}
+.addNew_content{
+    padding: 0px 30px;
+}
+
+.newtask_txt{
+
+    border:none;
+    width: 100%;
+    height: 100px;
+    font-size: 40px;
+    word-wrap: break-word;
+    outline: none;
+}
+
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: #393939;
+    opacity: 33%;
+}
+
+::placeholder {
+    font-size: 40px;
+    color: #393939;
+    opacity: 25%;
+    padding-top: 50px;
+}
+
+.submit{
+    background-color: #FE4775;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left:0;
+    right: 0;
+    height: 70px;
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+
+}
+
+.submit:hover{
+    background-color: #ec4673;
+}
+
+.addNew_date{
+    padding: 0 30px ;
+}
+
+.chooseDate{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: 32px 23px;
+    padding: 30px;
+    background-color: #F5F5F5;
+}
+
+/*=======================*/
+
+.task_app{
+    background-color: #161060;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 100%;
+    -webkit-transition: right .5s ease-in-out;
+    -moz-transition: right .5s ease-in-out;
+    -ms-transition: right .5s ease-in-out;
+    -o-transition: right .5s ease-in-out;
+    transition: right .5s ease-in-out;
+}
+.task_app.opened{
+    right: 0;
+}
+
+.taskapp_title{
+    margin: 60px 30px 0 30px;
+    flex-grow: 0;
+    position: relative;
+}
+.taskapp_title .title {
+    font-size: 20px;
+    color: white;
+}
+
+.taskapp_title .closeBTN {
+    color: #fff;
+    top: -2px;
+}
+
+
+.taskapp_menu, .taskapp_about{
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.taskapp_about_margin{
+    margin-bottom: 50px;
+}
+
+.taskapp_menu span{
+    color: white;
+    font-size: 32px;
+    padding-bottom:24px ;
+}
+
+.taskapp_about span{
+    color: white;
+    font-size: 20px;
+    padding-bottom:24px;
+}
+
+.taskapp_menu span:hover, .taskapp_about span:hover{
+    cursor: pointer;
+    color:  #FE4775;;
+}
+
+.calender_pg{
+    position:fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.cal_header{
+    padding: 40px 30px;
+    flex-grow: 0;
+}
+.cal_header div{
+    padding: 10px 0;
+}
+.cal_header span{
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+.calender{
+    width: 400px;
+    height: 100px;
+    background-color: #161060;
+}
+
+.day_details{
+    width: 400px;
+    height: 150px;
+    background-color: #15cb4a;
+}
+
+.right_menu div{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+    /*height: 0;*/
+    /*overflow: hidden;*/
+
+              }
+.today.show, .tomorrow.show, .this_week.show{
+    z-index: 2;
+    opacity: 100%;
+    transition: opacity .3s ease-in;
+    transition-delay: .2s;
+
+    /*overflow: visible;*/
+    /*height: auto;*/
+}
