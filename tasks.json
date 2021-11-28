@@ -1,0 +1,88 @@
+{
+  "today": [
+    {
+      "id": 0,
+      "title": "learn javascript ",
+      "done": true
+    },
+    {
+      "id": 1,
+      "title": "super market: tomato, potato, chicken, yogourt, milk, pasta, rice, cake, juice, avocado",
+      "done": false
+    },
+    {
+      "id": 2,
+      "title": "buy jacket for Bilal ",
+      "done": false
+    },
+    {
+      "id": 3,
+      "title": "backe birthday cake and prepare food and snacks for the party",
+      "done": false
+    },
+    {
+      "id": 4,
+      "title": "super market: tomato, potato, chicken, yogourt, milk, pasta",
+      "done": false
+    },
+    {
+      "id": 5,
+      "title": "Call my sick friend",
+      "done": true
+    },
+    {
+      "id": 6,
+      "title": "hicking",
+      "done": false
+    },
+    {
+      "id": 7,
+      "title": "javascript promises, sync, async, await",
+      "done": false
+    },
+    {
+      "id": 8,
+      "title": "buy food again and again",
+      "done": false
+    },
+    {
+      "id": 9,
+      "title": "backe birthday cake and prepare food and snacks for the party",
+      "done": false
+    },
+    {
+      "id": 10,
+      "title": "slappe av and kose meg",
+      "done": false
+    },
+    {
+      "id": 11,
+      "title": "visit mom",
+      "done": false
+    }
+  ],
+  "tomorrow": [
+    {
+      "id": 0,
+      "title": "tom 1 task",
+      "done": false
+    },
+    {
+      "id": 1,
+      "title": "tom 2 task",
+      "done": false
+    }
+  ],
+  "this_week": [
+    {
+      "id": 0,
+      "title": "next 1 task",
+      "done": false
+    },
+    {
+      "id": 1,
+      "title": "next 2 task",
+      "done": false
+    }
+  ]
+}
